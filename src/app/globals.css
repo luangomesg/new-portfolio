@@ -18,7 +18,7 @@
   --accent: oklch(0.45 0.15 290);
   --accent-foreground: oklch(0.98 0.01 260);
 
-  --border: oklch(0.85 0.02 260);
+  --border: oklch(0.25 0.02 260);
 }
 
 .dark {
@@ -39,7 +39,7 @@
   --accent: oklch(0.48 0.16 290);
   --accent-foreground: oklch(0.98 0.01 260);
 
-  --border: oklch(0.25 0.02 260);
+  --border: oklch(84.918% 0.02017 260.228 / 0.753);
 }
 
 @theme inline {
@@ -69,6 +69,6 @@
 
 @layer components {
   .nav-item {
-    @apply px-4 py-3;
+    @apply px-3 py-2;
   }
 }
