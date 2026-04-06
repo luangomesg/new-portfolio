@@ -1,5 +1,9 @@
-import { Header } from "@/sections";
+import { Hero } from "@/sections";
 
 export default function Home() {
-  return <Header />;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
