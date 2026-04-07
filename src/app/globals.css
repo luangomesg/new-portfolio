@@ -61,6 +61,10 @@
   --color-border: var(--border);
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 @layer base {
   body {
     @apply bg-background text-foreground;
@@ -70,5 +74,13 @@
 @layer components {
   .nav-item {
     @apply px-3 py-2;
+  }
+
+  .orb-container {
+    @apply relative z-1 w-full h-full scale-[1.25];
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 }
