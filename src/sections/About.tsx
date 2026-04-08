@@ -1,6 +1,10 @@
 "use client";
 
 import ProfileCard from "@/components/ProfileCard";
+import Image from "next/image";
+import Code from "@/assets/icons/code-front.svg";
+import UiUx from "@/assets/icons/user-ui-ux.svg";
+import Backend from "@/assets/icons/backend.svg";
 
 export function About() {
   return (
@@ -29,6 +33,49 @@ export function About() {
           aplicar minha experiência técnica e contribuir para projetos de ponta
           como front-end ou back-end.
         </p>
+      </div>
+
+      <div className="w-full h-full space-y-6">
+        <div className="card-about">
+          <div className="flex items-center gap-2 mb-1">
+            <Image
+              src={Code}
+              width={25}
+              height={25}
+              alt="Frontend"
+              aria-hidden="true"
+              className=""
+            />{" "}
+            <span className="font-bold">Frontend</span>
+          </div>
+          <div>React, Next.js, TypeScript, TailwindCSS</div>
+        </div>
+        <div className="card-about">
+          <div className="flex items-center gap-2 mb-1">
+            <Image
+              src={UiUx}
+              width={25}
+              height={25}
+              alt="UI/UX"
+              aria-hidden="true"
+            />
+            <span className="font-bold">UI/UX</span>
+          </div>
+          <div>Design Responsivo, Acessibilidade, SEO, Animações</div>
+        </div>
+        <div className="card-about">
+          <div className="flex items-center gap-2 mb-1">
+            <Image
+              src={Backend}
+              width={25}
+              height={25}
+              alt="Backend"
+              aria-hidden="true"
+            />
+            <span className="font-bold">Backend</span>
+          </div>
+          <div>Node.js, Nest.js, Express, MongoDB, PostgreSQL</div>
+        </div>
       </div>
     </section>
   );
