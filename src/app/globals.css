@@ -19,6 +19,7 @@
   --accent-foreground: oklch(0.98 0.01 260);
 
   --border: oklch(0.85 0.02 260);
+  --bg-card: rgba(4, 3, 5, 0.08);
 }
 
 .dark {
@@ -40,6 +41,7 @@
   --accent-foreground: oklch(0.98 0.01 260);
 
   --border: oklch(0.25 0.02 260);
+  --bg-card: rgba(9, 0, 43, 0.671);
 }
 
 @theme inline {
@@ -59,6 +61,7 @@
   --color-accent-foreground: var(--accent-foreground);
 
   --color-border: var(--border);
+  --color-bg-card: var(--bg-card);
 }
 
 html {
@@ -82,5 +85,9 @@ html {
 
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .card-about {
+    @apply flex flex-col justify-center w-[85%] h-35 mx-auto py-5 px-5 bg-bg-card rounded-2xl border border-border;
   }
 }
