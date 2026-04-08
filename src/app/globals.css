@@ -22,7 +22,7 @@
 }
 
 .dark {
-  --background: oklch(0.12 0.02 260);
+  --background: oklch(0.11 0.1 285);
   --foreground: oklch(0.95 0.01 260);
 
   /* 🔥 roxo mais fechado (menos neon, mais profundo) */
