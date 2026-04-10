@@ -18,6 +18,7 @@ export function About() {
           name="Luan Gomes"
           title="Desenvolvedor"
           avatarUrl="/avatar.png"
+          iconUrl="/"
           showUserInfo={false}
           enableTilt={true}
           enableMobileTilt={true}
@@ -45,7 +46,7 @@ export function About() {
       >
         <Folder
           color="#5227FF"
-          size={1.1}
+          size={1}
           items={[
             <a
               key="github"
