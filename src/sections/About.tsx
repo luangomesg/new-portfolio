@@ -18,6 +18,7 @@ export function About() {
           name="Luan Gomes"
           title="Desenvolvedor"
           avatarUrl="/avatar.png"
+          iconUrl="/"
           showUserInfo={false}
           enableTilt={true}
           enableMobileTilt={true}

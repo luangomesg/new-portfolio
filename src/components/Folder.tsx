@@ -174,7 +174,11 @@ const Folder: React.FC<FolderProps> = ({
               borderRadius: "5px 10px 10px 10px",
               ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
             }}
-          ></div>
+          >
+            <span className="text-primary-foreground flex w-full h-full items-center justify-center text-[0.9rem] font-bold">
+              Meus Links
+            </span>
+          </div>
         </div>
       </div>
     </div>
