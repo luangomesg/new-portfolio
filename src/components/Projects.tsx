@@ -2,6 +2,8 @@ import Image from "next/image";
 import yourForum from "@/assets/images/yourforum.png";
 import devBills from "@/assets/images/devbills.png";
 import playStation from "@/assets/images/playstation.png";
+import pokedex from "@/assets/images/pokedex.png";
+import conversorMoeda from "@/assets/images/moeda.png";
 
 const portfolioProjects = [
   {
@@ -25,6 +27,22 @@ const portfolioProjects = [
       "Uma pagina da playstation store feita com algumas animações e interações.",
     link: "https://luangomesg.github.io/Playstation-Store/",
     image: playStation,
+  },
+  {
+    title: "Pokedex",
+    description:
+      "Uma aplicação de pokedex feita com JavaScript. A aplicação possui uma interface simples e intuitiva, permitindo aos usuários pesquisar e visualizar informações sobre cada pokemon.",
+
+    link: "https://luangomesg.github.io/Pokedex/",
+    image: pokedex,
+  },
+  {
+    title: "Conversor de Moedas",
+    description:
+      "Uma aplicação de conversão de moedas. A aplicação permite aos usuários converter valores entre Dolar, Euro e Bitcoin.",
+
+    link: "https://convertingcoin.netlify.app",
+    image: conversorMoeda,
   },
 ];
 
