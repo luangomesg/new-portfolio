@@ -60,7 +60,7 @@ export const ProjectsComponent = () => {
           >
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
-                <h3 className=" text-2xl mt-2 md:mt-5 md:text-4xl">
+                <h3 className=" text-2xl mt-2 md:mt-5 md:text-4xl font-bold">
                   {project.title}
                 </h3>
                 <hr className="border-t-2 border-border mt-4 md:mt-5" />

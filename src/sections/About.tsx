@@ -53,7 +53,7 @@ export function About() {
               href="https://github.com/luangomesg"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl "
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
             >
               <Image src={Github} alt="GitHub" width={40} height={40} />
             </a>,
@@ -63,7 +63,7 @@ export function About() {
               href="https://www.linkedin.com/in/luan-gomes-galvão/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl "
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
             >
               <Image src={Likedin} alt="LinkedIn" width={40} height={40} />
             </a>,
@@ -72,7 +72,7 @@ export function About() {
               key="email"
               href="mailto:luan.gomesdv@gmail.com"
               target="_blank"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl "
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
             >
               <Image src={Email} alt="Email" width={40} height={40} />
             </a>,
