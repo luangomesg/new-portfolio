@@ -52,7 +52,7 @@ const techLogos = [
   {
     node: <SiGithub />,
     title: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/luangomesg",
   },
   {
     node: <SiNodedotjs />,

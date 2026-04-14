@@ -1,3 +1,4 @@
+import { cx } from "class-variance-authority";
 import React, { useState } from "react";
 
 interface FolderProps {
@@ -57,6 +58,13 @@ const Folder: React.FC<FolderProps> = ({
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleClick();
+    }
+  };
+
   const handlePaperMouseMove = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
     index: number,
@@ -105,14 +113,20 @@ const Folder: React.FC<FolderProps> = ({
   return (
     <div style={scaleStyle} className={className}>
       <div
-        className={`group relative transition-all duration-200 ease-in cursor-pointer ${
-          !open ? "hover:-translate-y-2" : ""
-        }`}
+        className={cx(
+          "group relative transition-all duration-200 ease-in cursor-pointer",
+          "focus-ring",
+          !open ? "hover:-translate-y-2" : "",
+        )}
         style={{
           ...folderStyle,
           transform: open ? "translateY(-8px)" : undefined,
         }}
+        tabIndex={0}
+        role="button"
+        aria-expanded={open}
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
       >
         <div
           className="relative w-25 h-20 rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]"
@@ -125,7 +139,7 @@ const Folder: React.FC<FolderProps> = ({
           {papers.map((item, i) => {
             let sizeClasses = "";
             if (i === 0)
-              sizeClasses = open ? "w-[70%] h-[80%]" : "w-[70%] h-[80%]";
+              sizeClasses = open ? "w-[70%] h-[80%] " : "w-[70%] h-[80%]";
             if (i === 1)
               sizeClasses = open ? "w-[70%] h-[80%]" : "w-[80%] h-[70%]";
             if (i === 2)
@@ -151,13 +165,22 @@ const Folder: React.FC<FolderProps> = ({
                   borderRadius: "10px",
                 }}
               >
-                {item}
+                {item && React.isValidElement(item)
+                  ? React.cloneElement(
+                      item as React.ReactElement<
+                        React.HTMLAttributes<HTMLElement>
+                      >,
+                      {
+                        tabIndex: open ? 0 : -1,
+                      },
+                    )
+                  : item}
               </div>
             );
           })}
           <div
-            className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out ${
-              !open ? "group-hover:transform-[skew(15deg)_scaleY(0.6)]" : ""
+            className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out  ${
+              !open ? "group-hover:transform-[skew(15deg)_scaleY(0.6)] " : ""
             }`}
             style={{
               backgroundColor: color,
