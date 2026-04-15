@@ -89,7 +89,7 @@ export const Projects = () => {
           fadeOut
           fadeOutColor="var(--background)"
           scaleOnHover
-          ariaLabel="Technology partners"
+          aria-hidden="true"
         />
       </div>
     </section>
