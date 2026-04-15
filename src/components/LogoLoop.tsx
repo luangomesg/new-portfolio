@@ -430,28 +430,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
           />
         );
 
-        const itemAriaLabel = isNodeItem
-          ? ((item as NodeLogoItem).ariaLabel ?? (item as NodeLogoItem).title)
-          : ((item as ImageLogoItem).alt ?? (item as ImageLogoItem).title);
-
-        const inner = (item as NodeLogoItem | ImageLogoItem).href ? (
-          <a
-            className={cx(
-              "inline-flex items-center no-underline rounded",
-              "transition-opacity duration-200 ease-linear",
-              "hover:opacity-80",
-              "focus-visible:outline focus-visible:outline-current focus-visible:outline-offset-2",
-            )}
-            href={(item as NodeLogoItem | ImageLogoItem).href}
-            aria-label={itemAriaLabel || "logo link"}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {content}
-          </a>
-        ) : (
-          content
-        );
+        const inner = content;
 
         return (
           <li
@@ -475,9 +454,9 @@ export const LogoLoop = React.memo<LogoLoopProps>(
         Array.from({ length: copyCount }, (_, copyIndex) => (
           <ul
             className={cx("flex items-center", isVertical && "flex-col")}
+            aria-hidden="true"
             key={`copy-${copyIndex}`}
             role="list"
-            aria-hidden={copyIndex > 0}
             ref={copyIndex === 0 ? seqRef : undefined}
           >
             {logos.map((item, itemIndex) =>

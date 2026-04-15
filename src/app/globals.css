@@ -66,11 +66,16 @@
 
 html {
   scroll-padding-top: 80px;
+  scroll-behavior: smooth;
 }
 
 @layer base {
   body {
     @apply bg-background text-foreground;
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }
 
@@ -89,5 +94,33 @@ html {
 
   .card-about {
     @apply flex flex-col justify-center w-[85%] h-35 mx-auto py-5 px-5 bg-bg-card rounded-2xl border border-border;
+  }
+}
+
+@layer utilities {
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-in-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-in-out forwards;
   }
 }
