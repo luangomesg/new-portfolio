@@ -129,7 +129,7 @@ const Folder: React.FC<FolderProps> = ({
         onKeyDown={handleKeyDown}
       >
         <div
-          className="relative w-25 h-20 rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]"
+          className="relative w-25 h-20 rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] md:w-30 md:h-25"
           style={{ backgroundColor: folderBackColor }}
         >
           <span
@@ -198,7 +198,7 @@ const Folder: React.FC<FolderProps> = ({
               ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
             }}
           >
-            <span className="text-primary-foreground flex w-full h-full items-center justify-center text-[0.9rem] font-bold">
+            <span className="text-primary-foreground flex w-full h-full items-center justify-center text-[0.9rem] font-bold md:text-[1.1rem]">
               Meus Links
             </span>
           </div>

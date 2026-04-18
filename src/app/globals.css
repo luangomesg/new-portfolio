@@ -81,11 +81,11 @@ html {
 
 @layer components {
   .nav-item {
-    @apply px-3 py-2;
+    @apply px-3 py-2 md:px-5 md:text-[1.3rem];
   }
 
   .orb-container {
-    @apply relative z-1 w-full h-full scale-[1.25];
+    @apply relative z-1 w-full h-full scale-[1.25] md:scale-[1.15];
   }
 
   .focus-ring {
@@ -93,7 +93,7 @@ html {
   }
 
   .card-about {
-    @apply flex flex-col justify-center w-[85%] h-35 mx-auto py-5 px-5 bg-bg-card rounded-2xl border border-border;
+    @apply flex flex-col justify-center w-[85%] h-35 mx-auto py-5 px-5 bg-bg-card rounded-2xl border-2 border-border;
   }
 }
 
@@ -107,6 +107,15 @@ html {
     }
   }
 
+  @keyframes slide-up-md {
+    from {
+      transform: translateY(-25%) scale(0.5);
+    }
+    to {
+      transform: translateY(-25%) scale(1);
+    }
+  }
+
   @keyframes slide-down {
     from {
       transform: translateY(0%);
@@ -116,11 +125,29 @@ html {
     }
   }
 
+  @keyframes slide-down-md {
+    from {
+      transform: translateY(-25%) scale(1);
+    }
+    to {
+      transform: translateY(-25%) scale(0.5);
+    }
+  }
+
   .animate-slide-up {
     animation: slide-up 0.3s ease-in-out forwards;
   }
-
   .animate-slide-down {
     animation: slide-down 0.3s ease-in-out forwards;
+  }
+
+  @media (min-width: 768px) {
+    .animate-slide-up {
+      animation: slide-up-md 0.3s ease-in-out forwards;
+    }
+
+    .animate-slide-down {
+      animation: slide-down-md 0.3s ease-in-out forwards;
+    }
   }
 }

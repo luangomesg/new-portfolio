@@ -29,8 +29,10 @@ export function About() {
         />
       </div>
       <div className="w-[85%] flex flex-col text-center gap-2">
-        <h2 className="text-primary text-[1.4rem] font-bold">Sobre mim</h2>
-        <p className="opacity-90">
+        <h2 className="text-primary text-[1.4rem] font-bold md:text-3xl">
+          Sobre mim
+        </h2>
+        <p className="opacity-90 md:text-[1.2rem]">
           Desenvolvedor Front-End com proficiência em HTML, CSS, JavaScript,
           TypeScript e Node, e experiência com frameworks modernos como React,
           Next.js e Nest.js. Especialista em responsividade, e otimização de
@@ -46,6 +48,7 @@ export function About() {
       >
         <Folder
           color="#5227FF"
+          className="md:scale-[1.1]"
           size={1}
           items={[
             <a
@@ -53,9 +56,15 @@ export function About() {
               href="https://github.com/luangomesg"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring "
             >
-              <Image src={Github} alt="GitHub" width={40} height={40} />
+              <Image
+                src={Github}
+                alt="GitHub"
+                width={40}
+                height={40}
+                className="md:w-12.5"
+              />
             </a>,
 
             <a
@@ -65,7 +74,13 @@ export function About() {
               rel="noopener noreferrer"
               className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
             >
-              <Image src={Likedin} alt="LinkedIn" width={40} height={40} />
+              <Image
+                src={Likedin}
+                alt="LinkedIn"
+                width={40}
+                height={40}
+                className="md:w-12.5"
+              />
             </a>,
 
             <a
@@ -74,7 +89,13 @@ export function About() {
               target="_blank"
               className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
             >
-              <Image src={Email} alt="Email" width={40} height={40} />
+              <Image
+                src={Email}
+                alt="Email"
+                width={40}
+                height={40}
+                className="md:w-12.5"
+              />
             </a>,
           ]}
         />
@@ -89,24 +110,29 @@ export function About() {
               height={25}
               alt="Frontend"
               aria-hidden="true"
-              className=""
-            />{" "}
-            <span className="font-bold">Frontend</span>
+              className="md:w-7.5"
+            />
+            <span className="font-bold md:text-[1.3rem]">Frontend</span>
           </div>
-          <div>React, Next.js, TypeScript, TailwindCSS</div>
+          <div className="md:text-[1.2rem]">
+            React, Next.js, TypeScript, TailwindCSS
+          </div>
         </div>
         <div className="card-about">
           <div className="flex items-center gap-2 mb-1">
             <Image
               src={UiUx}
-              width={25}
-              height={25}
+              width={20}
+              height={20}
               alt="UI/UX"
               aria-hidden="true"
+              className="md:w-7.5"
             />
-            <span className="font-bold">UI/UX</span>
+            <span className="font-bold md:text-[1.3rem]">UI/UX</span>
           </div>
-          <div>Design Responsivo, Acessibilidade, SEO, Animações</div>
+          <div className="md:text-[1.2rem]">
+            Design Responsivo, Acessibilidade, SEO, Animações
+          </div>
         </div>
         <div className="card-about">
           <div className="flex items-center gap-2 mb-1">
@@ -116,10 +142,13 @@ export function About() {
               height={25}
               alt="Backend"
               aria-hidden="true"
+              className="md:w-7.5"
             />
-            <span className="font-bold">Backend</span>
+            <span className="font-bold md:text-[1.3rem]">Backend</span>
           </div>
-          <div>Node.js, Nest.js, Express, MongoDB, PostgreSQL</div>
+          <div className="md:text-[1.2rem]">
+            Node.js, Nest.js, Express, MongoDB, PostgreSQL
+          </div>
         </div>
       </div>
     </section>
