@@ -4,6 +4,7 @@ import devBills from "@/assets/images/devbills.png";
 import playStation from "@/assets/images/playstation.png";
 import pokedex from "@/assets/images/pokedex.png";
 import conversorMoeda from "@/assets/images/moeda.png";
+import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 const portfolioProjects = [
   {
@@ -64,16 +65,16 @@ export const ProjectsComponent = () => {
                   {project.title}
                 </h3>
                 <hr className="border-t-2 border-border mt-4 md:mt-5" />
-                <p className="text-secondary-foreground/90 mt-4 md:mt-5">
+                <p className="text-secondary-foreground/90 mt-4 md:mt-5 md:text-[1.3rem]">
                   {project.description}
                 </p>
                 <a
                   href={project.link}
                   target="_blank"
-                  className="bg-primary text-primary-foreground focus-ring h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto px-6 "
+                  className="bg-primary text-primary-foreground focus-ring h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 px-6 md:text-[1.2rem] "
                 >
                   <span>Visitar Site</span>
-                  {/* <ArrowUpRightIcon className="size-4" /> */}
+                  <Image src={ArrowUpRightIcon} alt="" aria-hidden="true" />
                 </a>
               </div>
               <div className="relative">

@@ -88,7 +88,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="bg-primary text-primary-foreground px-3 py-1 rounded-lg focus-ring disabled:opacity-50"
+        className="bg-primary text-primary-foreground px-3 py-1 rounded-lg focus-ring disabled:opacity-50 md:text-[1.1rem]"
       >
         {loading ? "Enviando..." : "Enviar"}
       </button>
