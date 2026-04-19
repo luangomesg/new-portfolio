@@ -1,7 +1,12 @@
 "use client";
 
 import { ThemeToggle } from "@/components/darkMode";
+import Folder from "@/components/Folder";
 import Orb from "@/components/Orb";
+import Image from "next/image";
+import Github from "@/assets/icons/github.svg";
+import Likedin from "@/assets/icons/linkedin.svg";
+import Email from "@/assets/icons/email.svg";
 import { Typewriter } from "nextjs-simple-typewriter";
 
 export function Hero() {
@@ -43,7 +48,7 @@ export function Hero() {
             </a>
             <a
               href="#contato"
-              className="nav-item bg-primary text-primary-foreground rounded-full focus-ring"
+              className="nav-item bg-primary text-primary-foreground rounded-full focus-ring hover:bg-accent"
             >
               Contato
             </a>
@@ -94,6 +99,62 @@ export function Hero() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="flex z-10 w-12 h-12 fixed md:w-16 md:h-16 lg:row-start-3 lg:justify-self-center lg:mt-10 bottom-5 left-6 bg-primary rounded-full lg:h-16 lg:w-16 justify-center items-center">
+        <Folder
+          color="#ffffff"
+          className="scale-[1]"
+          size={0.3}
+          items={[
+            <a
+              key="github"
+              href="https://github.com/luangomesg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
+            >
+              <Image
+                src={Github}
+                alt="GitHub"
+                width={40}
+                height={40}
+                className="md:w-12.5"
+              />
+            </a>,
+
+            <a
+              key="linkedin"
+              href="https://www.linkedin.com/in/luan-gomes-galvão/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
+            >
+              <Image
+                src={Likedin}
+                alt="LinkedIn"
+                width={40}
+                height={40}
+                className="md:w-12.5"
+              />
+            </a>,
+
+            <a
+              key="email"
+              href="mailto:luan.gomesdv@gmail.com"
+              target="_blank"
+              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
+            >
+              <Image
+                src={Email}
+                alt="Email"
+                width={40}
+                height={40}
+                className="md:w-12.5"
+              />
+            </a>,
+          ]}
+        />
       </div>
     </section>
   );

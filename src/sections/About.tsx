@@ -5,10 +5,6 @@ import Image from "next/image";
 import Code from "@/assets/icons/code-front.svg";
 import UiUx from "@/assets/icons/user-ui-ux.svg";
 import Backend from "@/assets/icons/backend.svg";
-import Github from "@/assets/icons/github.svg";
-import Likedin from "@/assets/icons/linkedin.svg";
-import Email from "@/assets/icons/email.svg";
-import Folder from "@/components/Folder";
 
 export function About() {
   return (
@@ -16,7 +12,7 @@ export function About() {
       id="sobre"
       className="flex flex-col items-center gap-10 lg:grid lg:grid-rows-[auto_1fr_auto]"
     >
-      <div className="flex flex-col w-full items-center gap-10 lg:flex-row lg:row-start-1 lg:justify-self-center">
+      <div className="flex flex-col w-full bg-bg-card items-center gap-10 lg:flex-row lg:row-start-1 lg:justify-self-center lg:p-10 lg:max-w-4xl lg:rounded-2xl lg:border-2 lg:border-border">
         <div className="lg:flex lg:w-[40%] lg:justify-end">
           <ProfileCard
             name="Luan Gomes"
@@ -45,65 +41,6 @@ export function About() {
             ponta como front-end ou back-end.
           </p>
         </div>
-      </div>
-
-      <div
-        style={{ height: "130px", position: "relative" }}
-        className="flex items-center lg:row-start-3 lg:justify-self-center lg:mt-10"
-      >
-        <Folder
-          color="#5227FF"
-          className="md:scale-[1.1]"
-          size={1}
-          items={[
-            <a
-              key="github"
-              href="https://github.com/luangomesg"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring "
-            >
-              <Image
-                src={Github}
-                alt="GitHub"
-                width={40}
-                height={40}
-                className="md:w-12.5"
-              />
-            </a>,
-
-            <a
-              key="linkedin"
-              href="https://www.linkedin.com/in/luan-gomes-galvão/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
-            >
-              <Image
-                src={Likedin}
-                alt="LinkedIn"
-                width={40}
-                height={40}
-                className="md:w-12.5"
-              />
-            </a>,
-
-            <a
-              key="email"
-              href="mailto:luan.gomesdv@gmail.com"
-              target="_blank"
-              className="flex w-full h-full items-center justify-center bg-secondary rounded-2xl focus-ring"
-            >
-              <Image
-                src={Email}
-                alt="Email"
-                width={40}
-                height={40}
-                className="md:w-12.5"
-              />
-            </a>,
-          ]}
-        />
       </div>
 
       <div className="w-full h-full space-y-6 lg:grid lg:grid-cols-3 lg:max-w-4xl lg:gap-5 lg:row-start-2 lg:justify-self-center lg:max-h-35 lg:mt-10">

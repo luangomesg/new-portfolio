@@ -49,23 +49,23 @@ const portfolioProjects = [
 
 export const ProjectsComponent = () => {
   return (
-    <div className="container w-[90%]">
+    <div className="container w-[90%] lg:mt-10 lg:mb-10">
       <h2 className="font-bold text-3xl md:text-5xl text-center mt-6">
         Principais Projetos
       </h2>
-      <div className="flex flex-col mt-10 gap-20 md:mt-20">
+      <div className="flex flex-col mt-10 gap-20 md:mt-20 items-center">
         {portfolioProjects.map((project) => (
           <div
             key={project.title}
-            className="bg-bg-card border border-border rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-5 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none"
+            className="bg-bg-card border border-border rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-5 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none lg:w-full lg:max-w-4xl"
           >
-            <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-16 ">
               <div className="lg:pb-16">
-                <h3 className=" text-2xl mt-2 md:mt-5 md:text-4xl font-bold">
+                <h3 className=" text-2xl mt-2 md:mt-5 md:text-4xl font-bold lg:text-[2rem]">
                   {project.title}
                 </h3>
                 <hr className="border-t-2 border-border mt-4 md:mt-5" />
-                <p className="text-secondary-foreground/90 mt-4 md:mt-5 md:text-[1.3rem]">
+                <p className="text-secondary-foreground/90 mt-4 md:mt-5 md:text-[1.3rem] lg:text-[1.1rem]">
                   {project.description}
                 </p>
                 <a

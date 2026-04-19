@@ -70,7 +70,7 @@ export const Projects = () => {
   return (
     <section
       id="projetos"
-      className="flex flex-col items-center w-full h-full mt-10"
+      className="flex flex-col items-center w-full h-full mt-10 lg:mb-15"
     >
       <ProjectsComponent />
 

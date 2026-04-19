@@ -81,7 +81,7 @@ html {
 
 @layer components {
   .nav-item {
-    @apply px-3 py-2 md:px-5 md:text-[1.3rem] lg:text-2xl;
+    @apply px-3 py-2 md:px-5 md:text-[1.3rem] lg:text-2xl hover:text-primary;
   }
 
   .orb-container {
