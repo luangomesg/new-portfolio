@@ -40,7 +40,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-16 h-8 rounded-full overflow-hidden focus-ring md:w-20 md:h-10"
+      className="relative w-16 h-8 rounded-full overflow-hidden focus-ring md:w-20 md:h-10 lg:w-24 lg:h-12"
       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
       aria-pressed={isDark}
     >
@@ -51,14 +51,22 @@ export function ThemeToggle() {
       />
 
       <div
-        className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-background flex items-center justify-center shadow-md transition-transform duration-300  md:w-8 md:h-8 ${
-          isDark ? "translate-x-0" : "translate-x-8 md:translate-x-9"
+        className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-background flex items-center justify-center shadow-md transition-transform duration-300  md:w-8 md:h-8 lg:w-10 lg:h-10 ${
+          isDark
+            ? "translate-x-0"
+            : "translate-x-8 md:translate-x-9 lg:translate-x-12"
         }`}
       >
         {isDark ? (
-          <Moon aria-hidden="true" className="w-4 h-4 text-primary " />
+          <Moon
+            aria-hidden="true"
+            className="w-4 h-4 text-primary md:w-5 md:h-5 lg:w-6 lg:h-6 "
+          />
         ) : (
-          <Sun aria-hidden="true" className="w-4 h-4 text-primary " />
+          <Sun
+            aria-hidden="true"
+            className="w-4 h-4 text-primary md:w-5 md:h-5 lg:w-6 lg:h-6"
+          />
         )}
       </div>
     </button>

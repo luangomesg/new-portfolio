@@ -24,13 +24,13 @@ export function Hero() {
       />
 
       <div className="w-full h-screen flex flex-col items-center absolute ">
-        <header className="flex justify-center items-center fixed top-3 w-full z-10 md:justify-normal md:pl-8 md:gap-10">
-          <span className="text-4xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent hidden md:flex">
+        <header className="flex justify-center items-center fixed top-3 w-full z-10 md:justify-normal md:pl-8 md:gap-10 lg:grid lg:grid-cols-3">
+          <span className="text-4xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent hidden md:flex lg:col-start-1 lg:justify-self-start">
             Portfólio
           </span>
           <nav
             aria-label="Navegação principal"
-            className="flex gap-1 p-0.5 border border-border rounded-full bg-secondary backdrop-blur md:gap-0.5"
+            className="flex gap-1 p-0.5 border border-border rounded-full bg-secondary backdrop-blur md:gap-0.5 lg:col-start-2 lg:justify-self-start"
           >
             <a href="#inicio" className="nav-item focus-ring" tabIndex={0}>
               Início
@@ -51,18 +51,18 @@ export function Hero() {
         </header>
 
         <div className="flex flex-col justify-center h-full w-[90%] ">
-          <div className="flex flex-col w-[70%] self-center items-start mb-3 z-5 md:w-[46%]">
+          <div className="flex flex-col w-full max-w-60 self-center items-start mb-3 z-5 md:max-w-80">
             <ThemeToggle />
           </div>
 
           <div className="flex flex-col items-center mb-5 z-5 md:mb-8">
-            <p className="text-primary font-bold w-[70%] md:text-2xl md:w-[46%]">
+            <p className="text-primary font-bold w-full max-w-60 md:text-2xl md:max-w-80">
               Olá, eu sou o
             </p>
             <h1 className="text-4xl font-bold md:text-5xl">Luan Gomes.</h1>
             <div
               aria-live="polite"
-              className="h-4.25 w-[70%] md:w-[46%] md:text-[1.3rem]"
+              className="h-4.25 w-full max-w-60 md:max-w-80 md:text-[1.3rem]"
             >
               <Typewriter
                 words={[

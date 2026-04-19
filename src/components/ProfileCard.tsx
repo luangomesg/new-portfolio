@@ -499,10 +499,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       )}
       <div ref={shellRef} className="relative z-1 group">
         <section
-          className="grid relative overflow-hidden"
+          className="grid relative overflow-hidden h-[60svh] max-h-135 lg:max-h-90"
           style={{
-            height: "60svh",
-            maxHeight: "540px",
             aspectRatio: "0.718",
             borderRadius: cardRadius,
             border: "1px solid oklch(0.55 0.18 285)",
@@ -663,9 +661,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 style={{ top: "1em", display: "flex", gridArea: "auto" }}
               >
                 <h3
-                  className="font-semibold m-0"
+                  className="font-semibold m-0 text-[min(5svh,3em)] lg:text-[25px] lg:-mt-3"
                   style={{
-                    fontSize: "min(5svh, 3em)",
                     backgroundImage:
                       "linear-gradient(to bottom, #fff, #ffffff)",
                     backgroundSize: "1em 1.5em",
