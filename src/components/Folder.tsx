@@ -129,7 +129,7 @@ const Folder: React.FC<FolderProps> = ({
         onKeyDown={handleKeyDown}
       >
         <div
-          className="relative w-25 h-20 rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] md:w-30 md:h-25"
+          className="relative w-25 h-20 rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] md:w-30 md:h-25 lg:w-25 lg:h-20"
           style={{ backgroundColor: folderBackColor }}
         >
           <span
@@ -139,11 +139,17 @@ const Folder: React.FC<FolderProps> = ({
           {papers.map((item, i) => {
             let sizeClasses = "";
             if (i === 0)
-              sizeClasses = open ? "w-[70%] h-[80%] " : "w-[70%] h-[80%]";
+              sizeClasses = open
+                ? "w-[70%] h-[80%] scale-[2] translate-x-10"
+                : "w-[70%] h-[80%]";
             if (i === 1)
-              sizeClasses = open ? "w-[70%] h-[80%]" : "w-[80%] h-[70%]";
+              sizeClasses = open
+                ? "w-[70%] h-[80%] scale-[2] translate-x-10"
+                : "w-[80%] h-[70%]";
             if (i === 2)
-              sizeClasses = open ? "w-[70%] h-[80%]" : "w-[90%] h-[60%]";
+              sizeClasses = open
+                ? "w-[70%] h-[80%] scale-[2] translate-x-10"
+                : "w-[90%] h-[60%]";
 
             const transformStyle = open
               ? `${getOpenTransform(i)} translate(${paperOffsets[i].x}px, ${paperOffsets[i].y}px)`
@@ -157,7 +163,7 @@ const Folder: React.FC<FolderProps> = ({
                 className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out ${
                   !open
                     ? "transform -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
-                    : "hover:scale-110"
+                    : "hover:scale-[2.3]"
                 } ${sizeClasses}`}
                 style={{
                   ...(!open ? {} : { transform: transformStyle }),
@@ -198,8 +204,8 @@ const Folder: React.FC<FolderProps> = ({
               ...(open && { transform: "skew(-15deg) scaleY(0.6)" }),
             }}
           >
-            <span className="text-primary-foreground flex w-full h-full items-center justify-center text-[0.9rem] font-bold md:text-[1.1rem]">
-              Meus Links
+            <span className="text-primary-foreground flex w-full h-full items-center justify-center text-[0.9rem] font-bold md:text-[1.1rem] lg:text-[0.9rem]">
+              {/* Meus Links */}
             </span>
           </div>
         </div>

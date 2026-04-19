@@ -28,7 +28,7 @@ export function ContactMe() {
   return (
     <section
       id="contato"
-      className="flex flex-col text-center w-[90%] h-full bg-accent border-2 border-border justify-self-center rounded-3xl py-5 px-5"
+      className="flex flex-col text-center w-[90%] h-full bg-accent border-2 border-border justify-self-center rounded-3xl py-5 px-5 lg:w-full lg:max-w-4xl"
     >
       <div>
         <h2 className="text-2xl font-bold text-accent-foreground md:text-[1.7rem]">
@@ -42,7 +42,7 @@ export function ContactMe() {
 
       <button
         onClick={handleOpen}
-        className="bg-primary text-primary-foreground px-5 py-3 mt-3 rounded-2xl mx-auto font-bold border-2 border-border md:text-[1.2rem]"
+        className="bg-primary text-primary-foreground px-5 py-3 mt-3 rounded-2xl mx-auto font-bold border-2 border-border md:text-[1.2rem] hover:bg-primary/80"
       >
         Entrar em contato
       </button>
