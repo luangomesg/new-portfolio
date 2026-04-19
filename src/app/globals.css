@@ -81,11 +81,11 @@ html {
 
 @layer components {
   .nav-item {
-    @apply px-3 py-2 md:px-5 md:text-[1.3rem];
+    @apply px-3 py-2 md:px-5 md:text-[1.3rem] lg:text-2xl;
   }
 
   .orb-container {
-    @apply relative z-1 w-full h-full scale-[1.25] md:scale-[1.15];
+    @apply relative z-1 w-full h-full scale-[1.20] md:scale-[1.15] lg:scale-[1.10];
   }
 
   .focus-ring {
@@ -93,7 +93,7 @@ html {
   }
 
   .card-about {
-    @apply flex flex-col justify-center w-[85%] h-35 mx-auto py-5 px-5 bg-bg-card rounded-2xl border-2 border-border;
+    @apply flex flex-col justify-center w-[85%] h-35 mx-auto py-5 px-5 bg-bg-card rounded-2xl border-2 border-border lg:min-w-full;
   }
 }
 
