@@ -108,7 +108,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="flex z-10 w-12 h-12 fixed md:w-16 md:h-16 lg:row-start-3 lg:justify-self-center lg:mt-10 bottom-5 left-6 bg-primary rounded-full lg:h-16 lg:w-16 justify-center items-center">
+      <div className="flex z-100 w-12 h-12 fixed md:w-16 md:h-16 lg:row-start-3 lg:justify-self-center lg:mt-10 bottom-5 left-6 bg-primary rounded-full lg:h-16 lg:w-16 justify-center items-center">
         <Folder
           color="#ffffff"
           className="scale-[1]"
