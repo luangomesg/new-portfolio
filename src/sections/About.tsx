@@ -5,12 +5,18 @@ import Image from "next/image";
 import Code from "@/assets/icons/code-front.svg";
 import UiUx from "@/assets/icons/user-ui-ux.svg";
 import Backend from "@/assets/icons/backend.svg";
+import { useInView } from "@/utils/observer";
 
 export function About() {
+  const { ref, isVisible } = useInView();
+
   return (
     <section
+      ref={ref}
       id="sobre"
-      className="flex flex-col items-center gap-10 lg:grid lg:grid-rows-[auto_1fr_auto]"
+      className={`flex flex-col items-center gap-10 lg:grid lg:grid-rows-[auto_1fr_auto] transition-all duration-500 delay-300 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
     >
       <div className="flex flex-col w-full bg-bg-card items-center gap-10 lg:flex-row lg:row-start-1 lg:justify-self-center lg:p-10 lg:max-w-4xl lg:rounded-2xl lg:border-2 lg:border-border">
         <div className="lg:flex lg:w-[40%] lg:justify-end">

@@ -2,12 +2,15 @@
 
 import { ThemeToggle } from "@/components/darkMode";
 import Folder from "@/components/Folder";
-import Orb from "@/components/Orb";
+const Orb = dynamic(() => import("@/components/Orb"), {
+  ssr: false,
+});
 import Image from "next/image";
 import Github from "@/assets/icons/github.svg";
 import Likedin from "@/assets/icons/linkedin.svg";
 import Email from "@/assets/icons/email.svg";
 import { Typewriter } from "nextjs-simple-typewriter";
+import dynamic from "next/dynamic";
 
 export function Hero() {
   const openResume = () => {
@@ -17,25 +20,27 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="w-full h-screen relative flex flex-col justify-center items-center overflow-hidden"
+      className="w-full h-screen z-50 relative flex flex-col justify-center items-center overflow-hidden animate-fade-in [animation-delay:0.1s] opacity-0"
     >
-      <Orb
-        hoverIntensity={1.0}
-        rotateOnHover
-        hue={0}
-        forceHoverState={false}
-        backgroundColor="#000000"
-        aria-hidden="true"
-      />
+      <div className="flex w-full h-full z-60">
+        <Orb
+          hoverIntensity={1.0}
+          rotateOnHover
+          hue={0}
+          forceHoverState={false}
+          backgroundColor="#000000"
+          aria-hidden="true"
+        />
+      </div>
 
-      <div className="w-full h-screen flex flex-col items-center absolute ">
-        <header className="flex justify-center items-center fixed top-3 w-full z-10 md:justify-normal md:pl-8 md:gap-10 lg:grid lg:grid-cols-3">
+      <div className="w-full h-screen flex flex-col items-center absolute">
+        <header className="flex justify-center items-center fixed top-3 w-full z-70 md:justify-normal md:pl-8 md:gap-10 lg:grid lg:grid-cols-3 animate-fade-in [animation-delay:0.2s] opacity-0">
           <span className="text-4xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent hidden md:flex lg:col-start-1 lg:justify-self-start">
             Portfólio
           </span>
           <nav
             aria-label="Navegação principal"
-            className="flex gap-1 p-0.5 border border-border rounded-full bg-secondary backdrop-blur md:gap-0.5 lg:col-start-2 lg:justify-self-start"
+            className="flex gap-1 p-0.5 border border-border z-70 rounded-full bg-secondary backdrop-blur md:gap-0.5 lg:col-start-2 lg:justify-self-start"
           >
             <a href="#inicio" className="nav-item focus-ring" tabIndex={0}>
               Início
@@ -56,18 +61,20 @@ export function Hero() {
         </header>
 
         <div className="flex flex-col justify-center h-full w-[90%] ">
-          <div className="flex flex-col w-full max-w-60 self-center items-start mb-3 z-5 md:max-w-80">
+          <div className="flex flex-col w-full max-w-60 self-center items-start mb-3 z-100 md:max-w-80">
             <ThemeToggle />
           </div>
 
           <div className="flex flex-col items-center mb-5 z-5 md:mb-8">
-            <p className="text-primary font-bold w-full max-w-60 md:text-2xl md:max-w-80">
+            <p className="text-primary font-bold w-full max-w-60 md:text-2xl md:max-w-80 animate-fade-up [animation-delay:0.1s] opacity-0">
               Olá, eu sou o
             </p>
-            <h1 className="text-4xl font-bold md:text-5xl">Luan Gomes.</h1>
+            <h1 className="text-4xl font-bold md:text-5xl animate-fade-up [animation-delay:0.1s] opacity-0">
+              Luan Gomes.
+            </h1>
             <div
               aria-live="polite"
-              className="h-4.25 w-full max-w-60 md:max-w-80 md:text-[1.3rem]"
+              className="h-4.25 w-full max-w-60 md:max-w-80 md:text-[1.3rem] animate-fade-up [animation-delay:0.5s] opacity-0"
             >
               <Typewriter
                 words={[
@@ -82,10 +89,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center gap-3 z-5">
+          <div className="flex justify-center gap-3 z-100">
             <button
               aria-label="Baixar currículo"
-              className="bg-accent text-accent-foreground px-3 py-2 rounded-2xl z-5 cursor-pointer focus-ring md:px-6 md:text-[1.2rem]"
+              className="bg-accent text-accent-foreground px-3 py-2 rounded-2xl z-100 cursor-pointer focus-ring md:px-6 md:text-[1.2rem] animate-fade-up [animation-delay:0.1s] opacity-0"
               onClick={openResume}
             >
               Currículo
@@ -93,7 +100,7 @@ export function Hero() {
             <a
               aria-label="Ir para a seção sobre mim"
               href="#sobre"
-              className="bg-accent text-accent-foreground px-3 py-2 rounded-2xl z-5 cursor-pointer focus-ring md:px-6 md:text-[1.2rem]"
+              className="bg-accent text-accent-foreground px-3 py-2 rounded-2xl z-100 cursor-pointer focus-ring md:px-6 md:text-[1.2rem] animate-fade-up [animation-delay:0.9s] opacity-0"
             >
               Sobre mim
             </a>
@@ -120,6 +127,7 @@ export function Hero() {
                 width={40}
                 height={40}
                 className="md:w-12.5"
+                loading="eager"
               />
             </a>,
 

@@ -1,5 +1,8 @@
+"use client";
 import { ProjectsComponent } from "@/components/Projects";
-import LogoLoop from "@/components/LogoLoop";
+const LogoLoop = dynamic(() => import("@/components/LogoLoop"), {
+  ssr: false,
+});
 
 import {
   SiReact,
@@ -15,6 +18,8 @@ import {
 } from "react-icons/si";
 import PlaywrightIcon from "@/assets/icons/playwright.svg";
 import Image from "next/image";
+import { useInView } from "@/utils/observer";
+import dynamic from "next/dynamic";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -67,10 +72,12 @@ const techLogos = [
 ];
 
 export const Projects = () => {
+  const { ref, isVisible } = useInView();
   return (
     <section
+      ref={ref}
       id="projetos"
-      className="flex flex-col items-center w-full h-full mt-10 lg:mb-15"
+      className={`flex flex-col items-center w-full h-full mt-10 lg:mb-15 transition-all duration-500 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
     >
       <ProjectsComponent />
 
