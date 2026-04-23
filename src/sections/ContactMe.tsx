@@ -1,12 +1,14 @@
 "use client";
 
 import { ContactForm } from "@/components/contactForm";
+import { useInView } from "@/utils/observer";
 import { useState } from "react";
 
 export function ContactMe() {
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
   const [closing, setClosing] = useState(false);
+  const { ref, isVisible } = useInView();
 
   const handleOpen = () => {
     setOpen(true);
@@ -27,8 +29,9 @@ export function ContactMe() {
   };
   return (
     <section
+      ref={ref}
       id="contato"
-      className="flex flex-col text-center w-[90%] h-full bg-accent border-2 border-border justify-self-center rounded-3xl py-5 px-5 lg:w-full lg:max-w-4xl"
+      className={`flex flex-col text-center w-[90%] h-full bg-accent border-2 border-border justify-self-center rounded-3xl py-5 px-5 lg:w-full lg:max-w-4xl transition-all duration-500 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
     >
       <div>
         <h2 className="text-2xl font-bold text-accent-foreground md:text-[1.7rem]">

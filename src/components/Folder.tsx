@@ -115,7 +115,7 @@ const Folder: React.FC<FolderProps> = ({
       <div
         className={cx(
           "group relative transition-all duration-200 ease-in cursor-pointer",
-          "focus-ring",
+          "focus-ring focus-visible:ring-10 focus-visible:ring-black",
           !open ? "hover:-translate-y-2" : "",
         )}
         style={{
