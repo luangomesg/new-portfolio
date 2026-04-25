@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfólio - Luan Gomes
 
-## Getting Started
+Este é o meu portfólio pessoal desenvolvido com foco em performance, design moderno e boas práticas de desenvolvimento front-end.
 
-First, run the development server:
+## 🧠 Sobre o projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O objetivo deste projeto é apresentar minhas habilidades como desenvolvedor, meus projetos e formas de contato, com uma experiência fluida e agradável para o usuário.
+
+## ⚙️ Tecnologias utilizadas
+
+- Next.js 14 (App Router)
+- React
+- TypeScript
+- Tailwind CSS v4
+- Zod
+- React Hook Form
+- Node.js / API Routes
+
+## 🎨 Funcionalidades
+
+- 🌙 Dark mode  
+- ⚡ Animações suaves (entrada + scroll)  
+- 📩 Formulário de contato com envio de e-mail  
+- 🧩 Componentização reutilizável  
+- 📱 Design responsivo  
+- 🎯 Foco em performance (Lighthouse)  
+
+## 📂 Estrutura do projeto
+
+Abaixo está a descrição da organização de pastas do diretório principal:
+
+```text
+src/
+├── app/          # Lógica central, roteamento ou provedores globais
+    └── api/      # API do envio de email
+├── sections/     # Componentes das seções do portfólio
+├── components/   # Componentes reutilizáveis da interface 
+├── assets/       # Arquivos estáticos (Imagens, SVGs, Icons)
+├── utils/        # Funções utilitárias e auxiliares 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📬 Contato
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O projeto possui um formulário funcional para envio de mensagens diretamente para o meu e-mail.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Rodando o projeto localmente
 
-## Learn More
+```bash
+# clonar repositório
+git clone https://github.com/seu-usuario/new-portfolio.git
 
-To learn more about Next.js, take a look at the following resources:
+# entrar na pasta
+cd new-portfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# instalar dependências
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# rodar o projeto
+npm run dev
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
