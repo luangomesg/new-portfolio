@@ -2,6 +2,7 @@ import Image from "next/image";
 import yourForum from "@/assets/images/yourforum.png";
 import devBills from "@/assets/images/devbills.png";
 import playStation from "@/assets/images/playstation.png";
+import petDev from "@/assets/images/petdev.png";
 import pokedex from "@/assets/images/pokedex.png";
 import conversorMoeda from "@/assets/images/moeda.png";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -21,6 +22,13 @@ const portfolioProjects = [
       "DevBill$ é uma ferramenta que oferece eficiência e praticidade no controle e organização das finanças pessoais.",
     link: "https://dev-bill-frontend.vercel.app",
     image: devBills,
+  },
+  {
+    title: "PetDev",
+    description:
+      "Uma aplicação frontend de um petshop desenvolvida com foco na arquitetura moderna e boas práticas de desenvolvimento.",
+    link: "https://petdev-delta.vercel.app",
+    image: petDev,
   },
   {
     title: "Playstation Store",
